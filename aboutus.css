@@ -1,0 +1,111 @@
+/* 🌟 Full-page background with new font */
+body {
+    font-family: 'Dancing Script', cursive;  /* Stylish handwriting font */
+    text-align: center;
+    background: url('./images/background1.jpg') no-repeat center center fixed; /* Updated background image */
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* 🌅 Different background for About Page */
+.about-bg {
+    background: url('./images/aboutus.jpg') no-repeat center center fixed; /* Updated About Page image */
+    background-size: cover;
+}
+
+/* 🎨 Centered Content */
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff4081; /* Stylish pink */
+}
+
+/* 🔘 About & Home Buttons (No Box Look) */
+.about-btn, .home-btn {
+    font-size: 2rem;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    color: #ff4081; /* Pinkish text */
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.about-btn:hover, .home-btn:hover {
+    color: #e91e63; /* Slightly darker pink */
+    text-decoration: underline;
+}
+
+/* 📜 Digital Letter Styling */
+.letter {
+    background: rgba(255, 255, 255, 0.7); /* 70% Transparent */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #ff4081;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+/* 🎈 Floating Balloons */
+.balloon-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    bottom: -100px;
+    animation: float 6s infinite ease-in-out;
+}
+
+/* Different colors for balloons */
+.balloon:nth-child(1) { left: 10%; animation-duration: 5s; background: red; }
+.balloon:nth-child(2) { left: 30%; animation-duration: 6s; background: blue; }
+.balloon:nth-child(3) { left: 50%; animation-duration: 7s; background: green; }
+.balloon:nth-child(4) { left: 70%; animation-duration: 5.5s; background: yellow; }
+.balloon:nth-child(5) { left: 90%; animation-duration: 6.5s; background: pink; }
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { opacity: 0.8; transform: translateX(10px); }
+    100% { transform: translateY(-120vh) translateX(-10px); opacity: 0; }
+}
+
+/* 🎉 Hovering "Happy Birthday" Animation */
+.hover-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4081;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: hoverText 3s infinite ease-in-out;
+}
+
+@keyframes hoverText {
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
